@@ -1,6 +1,7 @@
 import './styles/global.css'
 import Logo from './assets/Logo.svg'
 import { House, Hash, Bell, Envelope, BookmarkSimple, FileText, User, DotsThreeCircle, Sparkle } from 'phosphor-react'
+import { Tweet } from './components/Tweet'
 
 function App() {
 
@@ -61,6 +62,11 @@ function App() {
 					</form>
 
 					<div className="separator" />
+
+					<Tweet />
+					<Tweet />
+					<Tweet />
+					<Tweet />
 				</main>
 			</div>
 		</div>
