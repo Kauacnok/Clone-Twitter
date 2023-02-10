@@ -1,6 +1,6 @@
 import './styles/global.css'
 import Logo from './assets/Logo.svg'
-import { House, Hash, Bell, Envelope, BookmarkSimple, FileText, User, DotsThreeCircle } from 'phosphor-react'
+import { House, Hash, Bell, Envelope, BookmarkSimple, FileText, User, DotsThreeCircle, Sparkle } from 'phosphor-react'
 
 function App() {
 
@@ -47,7 +47,21 @@ function App() {
 				<button className="new-tweet" type="button">Tweet</button>
 			</aside>
 			<div className="content">
-				content
+				<main className="timeline">
+					<div className="timeline-header">
+						Home
+						<Sparkle />
+					</div>
+					<form className="new-tweet-form">
+						<label htmlFor="tweet">
+							<img src="https://avatars.githubusercontent.com/u/74678945?v=4" alt="Kauacnok avatar" />
+							<textarea id="tweet" placeholder="What's happening?" />
+						</label>
+						<button type="submit">Tweet</button>
+					</form>
+
+					<div className="separator" />
+				</main>
 			</div>
 		</div>
 	)
