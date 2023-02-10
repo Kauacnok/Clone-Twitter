@@ -1,58 +1,19 @@
 import './styles/global.css'
 import Logo from './assets/Logo.svg'
-import { House, Hash, Bell, Envelope, BookmarkSimple, FileText, User, DotsThreeCircle, Sparkle } from 'phosphor-react'
 import { Tweet } from './components/Tweet'
+import { Sidebar } from './components/Sidebar'
+import { Header } from './components/Header'
+import { Separator } from './components/Separator'
+
 
 function App() {
 
 	return (
 		<div className="layout">
-			<aside className="sidebar">
-				<img src={Logo} alt="Logo" className="logo" />
-
-				<nav className="main-navigation">
-					<a href="" className="active">
-						<House weight="fill" />
-						Home
-					</a>
-					<a href="">
-						<Hash />
-						Explore
-					</a>
-					<a href="">
-						<Bell />
-						Notifications
-					</a>
-					<a href="">
-						<Envelope />
-						Messages
-					</a>
-					<a href="">
-						<BookmarkSimple />
-						Bookmarks
-					</a>
-					<a href="">
-						<FileText />
-						Lists
-					</a>
-					<a href="">
-						<User />
-						Profile
-					</a>
-					<a href="">
-						<DotsThreeCircle />
-						More
-					</a>
-				</nav>
-
-				<button className="new-tweet" type="button">Tweet</button>
-			</aside>
+			<Sidebar />
 			<div className="content">
 				<main className="timeline">
-					<div className="timeline-header">
-						Home
-						<Sparkle />
-					</div>
+					<Header title="Home" />
 					<form className="new-tweet-form">
 						<label htmlFor="tweet">
 							<img src="https://avatars.githubusercontent.com/u/74678945?v=4" alt="Kauacnok avatar" />
@@ -61,7 +22,7 @@ function App() {
 						<button type="submit">Tweet</button>
 					</form>
 
-					<div className="separator" />
+					<Separator />
 
 					<Tweet />
 					<Tweet />
