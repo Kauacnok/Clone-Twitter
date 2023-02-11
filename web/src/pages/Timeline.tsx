@@ -1,0 +1,30 @@
+import { Header } from '../components/Header'
+import { Separator } from '../components/Separator'
+import { Tweet } from '../components/Tweet'
+import '../styles/timeline.css'
+
+const tweets = [
+	'opa',
+	'hello',
+	'teste'
+]
+
+export function Timeline() {
+	return (
+		<main className="timeline">
+			<Header title="Home" />
+			<form className="new-tweet-form">
+				<label htmlFor="tweet">
+					<img src="https://avatars.githubusercontent.com/u/74678945?v=4" alt="Kauacnok avatar" />
+					<textarea id="tweet" placeholder="What's happening?" />
+				</label>
+				<button type="submit">Tweet</button>
+			</form>
+
+			<Separator />
+			{tweets.map((tweet) => {
+				return <Tweet text={tweet} key={tweet} />
+			})}
+		</main>
+	)
+}
