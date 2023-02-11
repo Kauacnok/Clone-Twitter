@@ -5,6 +5,11 @@ import { Sidebar } from './components/Sidebar'
 import { Header } from './components/Header'
 import { Separator } from './components/Separator'
 
+const tweets = [
+	'opa',
+	'hello',
+	'teste'
+]
 
 function App() {
 
@@ -23,11 +28,9 @@ function App() {
 					</form>
 
 					<Separator />
-
-					<Tweet />
-					<Tweet />
-					<Tweet />
-					<Tweet />
+					{tweets.map((tweet) => {
+						return <Tweet text={tweet} key={tweet} />
+					})}
 				</main>
 			</div>
 		</div>
