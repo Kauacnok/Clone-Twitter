@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import { House, Hash, Bell, Envelope, BookmarkSimple, FileText, User, DotsThreeCircle } from 'phosphor-react'
+import { House, Hash, Bell, Envelope, BookmarkSimple, FileText, User, DotsThreeCircle, Pencil } from 'phosphor-react'
 import Logo from '../assets/Logo.svg'
 import '../styles/sidebar.css'
 
@@ -11,39 +11,42 @@ export function Sidebar() {
 			<nav className="main-navigation">
 				<NavLink to="/">
 					<House weight="fill" />
-					Home
+					<span>Home</span>
 				</NavLink>
 				<Link to="/">
 					<Hash />
-					Explore
+					<span>Explore</span>
 				</Link>
 				<Link to="/">
 					<Bell />
-					Notifications
+					<span>Notifications</span>
 				</Link>
 				<Link to="/">
 					<Envelope />
-					Messages
+					<span>Messages</span>
 				</Link>
 				<Link to="/">
 					<BookmarkSimple />
-					Bookmarks
+					<span>Bookmarks</span>
 				</Link>
 				<Link to="/">
 					<FileText />
-					Lists
+					<span>Lists</span>
 				</Link>
 				<Link to="/">
 					<User />
-					Profile
+					<span>Profile</span>
 				</Link>
 				<Link to="/">
 					<DotsThreeCircle />
-					More
+					<span>More</span>
 				</Link>
 			</nav>
 
-			<button className="new-tweet" type="button">Tweet</button>
+			<button className="new-tweet" type="button">
+				<Pencil />
+				<span>Tweet</span>
+			</button>
 		</aside>
 	)
 }

@@ -24,6 +24,12 @@
 	border: 0;
 }
 
+.sidebar .new-tweet svg {
+	width: 1.5rem;
+	height: 1.5rem;
+	display: none;
+}
+
 .sidebar .new-tweet:hover {
 	filter: brightness(0.95);
 }
@@ -50,4 +56,23 @@
 
 .main-navigation a.active {
 	color: var(--twitter-blue)
+}
+
+@media (max-width: 780px) {
+	.sidebar {
+		align-items: center;
+		padding: 1.5rem 0.75rem;
+	}
+
+	.main-navigation a span {
+		display: none;
+	}
+
+	.sidebar .new-tweet svg {
+		display: block;
+	}
+
+	.sidebar .new-tweet span {
+		display: none;
+	}
 }
