@@ -5,6 +5,7 @@
 	gap: 0.75rem;
 	border-bottom: 1px solid #ebeef0;
 	text-decoration: none;
+	word-wrap: anywhere;
 }
 
 .tweet img {
@@ -58,4 +59,17 @@
 .tweet .tweet-content .tweet-content-footer button svg {
 	width: 1.25rem;
 	height: 1.25rem;
+}
+
+@media (max-width: 780px) {
+
+	.tweet .tweet-content .tweet-content-footer {
+		gap: 0.75rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.tweet .tweet-content .tweet-content-footer {
+		gap: 0.5rem;
+	}
 }

@@ -12,6 +12,18 @@
 
 @media (max-width: 780px) {
 	.layout {
-		grid-template-columns: 80px 1fr
+		grid-template-columns: 80px 1fr;
+	}
+	.content {
+		width: 90%;
+	}
+}
+
+@media (max-width: 320px) {
+	.layout {
+		grid-template-columns: 60px 1fr;
+	}
+	.content {
+		width: 95%;
 	}
 }

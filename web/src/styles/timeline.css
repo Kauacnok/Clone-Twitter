@@ -47,3 +47,26 @@
 .new-tweet-form button[type=submit]:hover {
 	filter: brightness(0.9);
 }
+
+@media (max-width: 780px) {
+
+	.new-tweet-form {
+		flex-direction: column;
+		align-items: start;
+	}
+
+	.new-tweet-form label textarea {
+		font-size: 1rem;
+	}
+
+	.new-tweet-form button[type=submit] svg {
+		padding: 0.25rem;
+	}
+
+	.new-tweet-form button[type=submit] svg {
+		display: block;
+	}
+	.new-tweet-form button[type=submit] span {
+		display: none;
+	}
+}
