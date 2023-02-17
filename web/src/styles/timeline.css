@@ -18,6 +18,8 @@
 
 .new-tweet-form label textarea {
 	flex: 1;
+	background-color: var(--background);
+	color: var(--text);
 	border: 0;
 	font-size: 1.25rem;
 	font-weight: 500;

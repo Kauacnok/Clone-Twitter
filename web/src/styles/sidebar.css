@@ -31,7 +31,7 @@
 }
 
 .sidebar .new-tweet:hover {
-	filter: brightness(0.95);
+	filter: brightness(0.9);
 }
 
 .main-navigation {
@@ -80,6 +80,5 @@
 @media (max-width: 320px) {
 	.sidebar .new-tweet {
 		padding: 0.5rem;
-
 	}
 }

@@ -6,10 +6,21 @@
 
 :root {
 	--twitter-blue: #1da1f2;
+	--background: #FFFFFF;
+	--text: #0F1419;
+	--separator: #EBEEF0;
+	--border: #F7F9FA;
+}
+
+[data-theme='dark'] {
+	--twitter-blue: #1da1f2;
+	--background: #121214;
+	--text: #FFFFFF;
+	--separator: #202020;
+	--border: #2F2F2F;
 }
 
 body {
-	color: #0F1419;
 	-webkit-font-smoothing: antialised;
 }
 
