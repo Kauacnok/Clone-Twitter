@@ -10,7 +10,7 @@ export function Default() {
 
 	return (
 		<div className="layout" data-theme={theme}>
-			<Sidebar />
+			<Sidebar themeName={theme} setTheme={setTheme} />
 			<div className="content">
 				<Outlet />
 			</div>

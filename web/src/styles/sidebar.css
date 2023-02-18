@@ -40,7 +40,16 @@
 	gap: 2rem;
 }
 
-.main-navigation a {
+.main-navigation button {
+	position: relative;
+	background-color: transparent;
+	border: 0;
+	color: var(--text);
+	font-size: 1.25rem; 
+	font-weight: 700;
+}
+
+.main-navigation a, button {
 	display: flex;
 	align-items: center;
 	gap: 1.25rem;
@@ -49,7 +58,7 @@
 	text-decoration: none
 }
 
-.main-navigation a svg{
+.main-navigation a svg, button svg {
 	width: 2rem;
 	height: 2rem;
 }
@@ -64,7 +73,7 @@
 		padding: 1.5rem 0.75rem;
 	}
 
-	.main-navigation a span {
+	.main-navigation a span, button span {
 		display: none;
 	}
 

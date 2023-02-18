@@ -1,0 +1,40 @@
+.more-menu-container {
+	position: absolute;
+	top: -3;
+	right: -355px;
+	width: 350px;
+	height: 100px;
+	background-color: var(--background);
+	color: var(--text);
+	border: 1px solid var(--border);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.more-menu-container p {
+	border: 1px solid var(--border);
+	border-radius: 10px;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
+@media (max-width: 780px) {
+	.more-menu-container {
+		width: 250px;
+		right: -290px;
+	}
+
+	.more-menu-container p {
+		padding: 0.25rem 0.5rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.more-menu-container {
+		width: 200px;
+		right: -220px;
+	}
+}

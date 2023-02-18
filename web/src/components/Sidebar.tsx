@@ -1,9 +1,34 @@
+import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { House, Hash, Bell, Envelope, BookmarkSimple, FileText, User, DotsThreeCircle, Pencil } from 'phosphor-react'
 import Logo from '../assets/Logo.svg'
 import '../styles/sidebar.css'
+import "../styles/more-menu-tab.css"
 
-export function Sidebar() {
+interface SidebarProps {
+	themeName: string,
+	setTheme: Function
+}
+
+export function Sidebar({themeName, setTheme}: SidebarProps) {
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+	function setMenu() {
+		if (isMenuOpen) {
+			setIsMenuOpen(false)
+			return
+		}
+		setIsMenuOpen(true)
+	}
+
+	function toggleTheme() {
+		if (themeName == 'light') {
+			setTheme('dark')
+			return
+		}
+		setTheme('light')
+	}
+
 	return (
 		<aside className="sidebar">
 			<img src={Logo} alt="Logo" className="logo" />
@@ -37,10 +62,17 @@ export function Sidebar() {
 					<User />
 					<span>Profile</span>
 				</Link>
-				<Link to="/">
+				<button type="button" onClick={setMenu}>
 					<DotsThreeCircle />
 					<span>More</span>
-				</Link>
+					{ isMenuOpen && 
+						<div className="more-menu-container">
+							<p onClick={toggleTheme}>Trocar para o tema { themeName == 'dark' ? 'claro' : 'escuro' }</p>
+							<p onClick={setMenu}>Fechar</p>
+						</div>
+					}
+
+				</button>
 			</nav>
 
 			<button className="new-tweet" type="button">
