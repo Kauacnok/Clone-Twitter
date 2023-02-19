@@ -1,6 +1,9 @@
 <p align='center'> 
 	<h1 align='center'>Clone do Twitter</h1>
 </p>
+<p align='center'> 
+	<img src="https://i.imgur.com/IjEWJ2S.png" alt="Imagem com o layout do site na versão para pc, tablet ou celular">
+</p>
 
 ## 🧪 Tecnologias
 
