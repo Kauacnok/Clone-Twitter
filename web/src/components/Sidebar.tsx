@@ -12,6 +12,7 @@ interface SidebarProps {
 
 export function Sidebar({themeName, setTheme}: SidebarProps) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	document.body.style.backgroundColor = themeName == 'dark' ? '#121214' : '#FFFFFF'
 
 	function setMenu() {
 		if (isMenuOpen) {

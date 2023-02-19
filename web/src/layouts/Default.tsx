@@ -7,6 +7,7 @@ import '../styles/default-layout.css'
 export function Default() {
 	const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 	const [theme, setTheme] = useState(isDarkTheme ? 'dark' : 'light')
+	document.body.style.backgroundColor = isDarkTheme ? '#121214' : '#FFFFFF'
 
 	return (
 		<div className="layout" data-theme={theme}>
